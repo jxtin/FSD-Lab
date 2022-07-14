@@ -45,15 +45,15 @@ h2 {
 }
 
 .main-content {
-    width: 250px;
-    top: 38%;
-    left: 50%;
-    position: absolute;
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); 
+  width: 250px;
+  top: 38%;
+  left: 50%;
+  position: absolute;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* Figure Image */
@@ -69,6 +69,7 @@ figure {
   text-align: center;
   display: block;
 }
+
 .social li {
   padding: 0;
   margin: 0;
@@ -79,6 +80,7 @@ figure {
   *display: inline;
   position: relative;
 }
+
 .social li a {
   font-size: 22px;
   color: #f7f7f7;
@@ -108,7 +110,9 @@ figure {
   color: #ff3270;
 }
 
-.social li a:hover, .social li a:active, .social li a:focus {
+.social li a:hover,
+.social li a:active,
+.social li a:focus {
   outline: none;
   text-decoration: none;
 }
@@ -129,4 +133,9 @@ figure {
   height: 100%;
   background-color: #0c0c0c;
   text-align: center;
+}
+
+.ded {
+  background-color: transparent;
+  justify-items: center;
 }
