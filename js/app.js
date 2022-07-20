@@ -131,3 +131,29 @@ particlesJS('particles-js',
   }
 
 );
+async function search_data() {
+  // get text input from the form
+  // const jsonData = require("./hello.json")
+  let response = await fetch("hello.json");
+  let json_file = await response.json();
+  console.log(json_file);
+  var input = document.getElementsByClassName("search")[0].value;
+  found = false;
+  console.log(input);
+  // length of json
+  for (var k in json_file) {
+    // console.log(k);
+    // console.log(json_file[k]);
+    if (json_file[k].name.toLowerCase() == input) {
+      found = true;
+      // create table
+      document.getElementsByClassName('search-results')[0].innerHTML = "<tr><th>Name</th><th>Description</th><th>Value</th></tr>";
+      document.getElementsByClassName('search-results')[0].innerHTML += "<tr><td>" + json_file[k].name + "</td><td>" + json_file[k].description + "</td><td>" + json_file[k].value + "</td></tr>";
+      break;
+    }
+  }
+  if (!found) {
+    document.getElementsByClassName('search-results')[0].innerHTML = "Not found";
+  }
+
+}
