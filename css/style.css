@@ -139,3 +139,13 @@ figure {
   background-color: transparent;
   justify-items: center;
 }
+
+.search-results {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  vertical-align: middle;
+  border: 1px dotted rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
