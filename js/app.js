@@ -137,7 +137,7 @@ async function search_data() {
   let response = await fetch("hello.json");
   let json_file = await response.json();
   console.log(json_file);
-  var input = document.getElementsByClassName("search")[0].value;
+  var input = document.getElementById("search").value;
   found = false;
   console.log(input);
   // length of json
@@ -147,13 +147,13 @@ async function search_data() {
     if (json_file[k].name.toLowerCase() == input) {
       found = true;
       // create table
-      document.getElementsByClassName('search-results')[0].innerHTML = "<tr><th>Name</th><th>Description</th><th>Value</th></tr>";
-      document.getElementsByClassName('search-results')[0].innerHTML += "<tr><td>" + json_file[k].name + "</td><td>" + json_file[k].description + "</td><td>" + json_file[k].value + "</td></tr>";
+      document.getElementById('search-results').innerHTML = "<tr><th>Name</th><th>Description</th><th>Value</th></tr>";
+      document.getElementById('search-results').innerHTML += "<tr><td>" + json_file[k].name + "</td><td>" + json_file[k].description + "</td><td>" + json_file[k].value + "</td></tr>";
       break;
     }
   }
   if (!found) {
-    document.getElementsByClassName('search-results')[0].innerHTML = "Not found";
+    document.getElementById('search-results').innerHTML = "Not found";
   }
 
 }

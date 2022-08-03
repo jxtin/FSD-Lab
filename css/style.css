@@ -45,7 +45,7 @@ h2 {
 }
 
 .main-content {
-  width: 250px;
+  min-width: 500px;
   top: 38%;
   left: 50%;
   position: absolute;
@@ -147,5 +147,76 @@ figure {
   vertical-align: middle;
   border: 1px dotted rgb(255, 255, 255);
   padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.parallax_1 {
+  background-image: url("../images/random.jpg");
+
+  min-height: 1000px;
+  position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_2 {
+  /* The image used */
+  background-image: url("../images/img_parallax.jpg");
+
+  /* Set a specific height */
+  min-height: 1000px;
+  position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.mid-stuff {
+  position: relative;
+  text-align: center;
+}
+
+.mid-stuff h2 {
+  /* add top padding */
+  padding-top: 20px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mid-stuff p {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 20px;
 }
