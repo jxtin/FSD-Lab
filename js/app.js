@@ -157,3 +157,29 @@ async function search_data() {
   }
 
 }
+
+
+async function showAll() {
+  let response = await fetch("hello.json");
+  let json_file = await response.json();
+  console.log(json_file);
+  document.getElementById('search-results').innerHTML = "<tr><th>Name</th><th>Description</th><th>Value</th></tr>";
+  for (var k in json_file) {
+    document.getElementById('search-results').innerHTML += "<tr><td>" + json_file[k].name + "</td><td>" + json_file[k].description + "</td><td>" + json_file[k].value + "</td></tr>";
+  }
+}
+
+async function insert() {
+  _name = document.getElementById("name").value;
+  roll = document.getElementById("roll").value;
+  // get current time
+  var today = new Date();
+  var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date + ' ' + time;
+
+  // append to the table
+  document.getElementById('search-results').innerHTML += "<tr><td>" + _name + "</td><td>" + roll + "</td>" + "<td>" + dateTime + "</td></tr>";
+
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- <!DOCTYPE books SYSTEM "books.dtd"> -->
+<?xml-model href="books.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- add stylesheet -->
+<?xml-stylesheet href="books.xsl" type="text/xsl"?>
+
+
+<books>
+    <book>
+        <title>The C Programming Language</title>
+        <author>Dennis Ritchie</author>
+        <price>$49.95</price>
+        <isbn>0-13-235088-2</isbn>
+    </book>
+    <book>
+        <title>The C++ Programming Language</title>
+        <author>Bjarne Stroustrup</author>
+        <price>$69.95</price>
+        <isbn>0-13-235088-3</isbn>
+    </book>
+    <book>
+        <title>The Java Programming Language</title>
+        <author>Bjarne Stroustrup</author>
+        <price>$69.95</price>
+        <isbn>0-13-235088-4</isbn>
+    </book>
+    <book>
+        <title>The .NET Programming Language</title>
+        <author>Microsoft</author>
+        <price>$69.95</price>
+        <isbn>0-13-235088-5</isbn>
+    </book>
+
+</books>

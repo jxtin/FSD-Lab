@@ -165,7 +165,7 @@ figure {
 
 .parallax_2 {
   /* The image used */
-  background-image: url("../images/img_parallax.jpg");
+  background-image: url("../images/somalaya-mountain-range-title.jpg");
 
   /* Set a specific height */
   min-height: 1000px;
@@ -219,4 +219,19 @@ figure {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 20px;
+}
+
+.parallax_3 {
+  /* The image used */
+  background-image: url("../images/star-mountain.jpg");
+
+  /* Set a specific height */
+  min-height: 1000px;
+  position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
