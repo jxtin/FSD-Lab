@@ -172,14 +172,27 @@ async function showAll() {
 async function insert() {
   _name = document.getElementById("name").value;
   roll = document.getElementById("roll").value;
-  // get current time
-  var today = new Date();
-  var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var dateTime = date + ' ' + time;
+  invalid = false;
+  // name should not be empty, or contain digits
+  if (_name == "" || /\d/.test(_name)) {
+    alert("Invalid name");
+    invalid = true;
+  }
+  // roll should be a number and not empty
+  if (isNaN(roll) || roll == "") {
+    alert("Invalid roll");
+    invalid = true;
+  }
 
-  // append to the table
-  document.getElementById('search-results').innerHTML += "<tr><td>" + _name + "</td><td>" + roll + "</td>" + "<td>" + dateTime + "</td></tr>";
+  if (!invalid) {
+    var today = new Date();
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date + ' ' + time;
+
+    // append to the table
+    document.getElementById('search-results').innerHTML += "<tr><td>" + _name + "</td><td>" + roll + "</td>" + "<td>" + dateTime + "</td></tr>";
+  }
 
 
 }
